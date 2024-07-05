@@ -1,5 +1,7 @@
 # Netsight web
 
+https://netsight.vercel.app/
+
 # Install
 
 1. `npm i` to install dependencies
