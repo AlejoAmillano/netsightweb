@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 import useForm from '../../../hooks/useForm'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast, Bounce } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import useAuth from '../../../hooks/useAuth'
 
 const Login = () => {
   const { form, changed } = useForm({})
+  const navigate = useNavigate()
 
   const { setAuth } = useAuth()
 
@@ -51,13 +52,13 @@ const Login = () => {
       })
       setAuth(data.user)
       setTimeout(() => {
-        window.location.href = '/'
-      }, 3000)
+        navigate('/')
+      }, 2000)
     } else {
       setAlert('error')
       toast.error('Incorrect email or password..', {
         position: 'top-right',
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

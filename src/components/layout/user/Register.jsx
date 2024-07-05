@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import useForm from '../../../hooks/useForm'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import env from 'react-dotenv'
 import { ToastContainer, toast, Bounce } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Register = () => {
   const { form, changed } = useForm({})
+  const navigate = useNavigate()
 
   const font =
     'system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji'
@@ -42,13 +43,13 @@ const Register = () => {
         },
       })
       setTimeout(() => {
-        window.location.href = '/login'
-      }, 3000)
+        navigate('/login')
+      }, 2000)
     } else if (data.status === 'exists') {
       setAlert('exists')
       toast.warn('User already exists..', {
         position: 'top-right',
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -64,7 +65,7 @@ const Register = () => {
       setAlert('error')
       toast.error('User could not be registered..', {
         position: 'top-right',
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
