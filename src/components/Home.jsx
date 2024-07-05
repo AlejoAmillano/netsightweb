@@ -134,12 +134,18 @@ const Home = () => {
                   <br />
                 </p>
               </main>
-              <div className="home-explore-more">
-                <p className="home-text11">Explore more</p>
-                <svg viewBox="0 0 1024 1024" className="home-icon05">
-                  <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
-                </svg>
-              </div>
+              <a
+                href="https://www.cloudflare.com/learning/access-management/phishing-attack/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="home-explore-more">
+                  <p className="home-text11">Explore more</p>
+                  <svg viewBox="0 0 1024 1024" className="home-icon05">
+                    <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
+                  </svg>
+                </div>
+              </a>
             </div>
             <div className="home-image04">
               <img alt="image" src={PhishingFoto} className="home-image05" />

@@ -29,7 +29,7 @@ const Register = () => {
       setAlert('saved')
       toast.success('User registered correctly!', {
         position: 'top-right',
-        autoClose: 5000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -41,11 +41,14 @@ const Register = () => {
           fontFamily: font,
         },
       })
+      setTimeout(() => {
+        window.location.href = '/login'
+      }, 3000)
     } else if (data.status === 'exists') {
       setAlert('exists')
       toast.warn('User already exists..', {
         position: 'top-right',
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -61,7 +64,7 @@ const Register = () => {
       setAlert('error')
       toast.error('User could not be registered..', {
         position: 'top-right',
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
