@@ -17,9 +17,6 @@ const Nav = () => {
           <a href="#FAQ" className="nav-link">
             FAQ
           </a>
-          <a href="#download" className="nav-link">
-            Download
-          </a>
         </div>
         <div className="home-container02">
           <Link to="/login">
@@ -55,9 +52,6 @@ const Nav = () => {
           </a>
           <a href="#FAQ">
             <span className="nav-link">FAQ</span>
-          </a>
-          <a href="#download">
-            <span className="nav-link">Download</span>
           </a>
         </div>
         <Link to="/login">

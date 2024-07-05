@@ -18,9 +18,6 @@ const Nav = () => {
           <a href="#FAQ" className="nav-link">
             FAQ
           </a>
-          <a href="#download" className="nav-link">
-            Download
-          </a>
           <Link to="dashboard/scans">
             <div className="home-container01">
               <img
@@ -53,9 +50,6 @@ const Nav = () => {
           </a>
           <a href="#FAQ">
             <span className="nav-link">FAQ</span>
-          </a>
-          <a href="#download">
-            <span className="nav-link">Download</span>
           </a>
           <Link to="dashboard/scans">
             <div className="home-container04">
