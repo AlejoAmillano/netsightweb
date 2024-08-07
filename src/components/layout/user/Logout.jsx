@@ -8,6 +8,7 @@ const Logout = () => {
 
   useEffect(() => {
     localStorage.removeItem('token')
+    localStorage.removeItem('user')
 
     setAuth({})
 
