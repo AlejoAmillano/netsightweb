@@ -53,6 +53,7 @@ const Login = () => {
       setAuth(data.user)
       setTimeout(() => {
         navigate('/')
+        window.location.reload()
       }, 2000)
     } else {
       setAlert('error')
