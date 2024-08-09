@@ -167,7 +167,6 @@ const Profile = () => {
                 />
               )}
             </div>
-            <label htmlFor="avatar-label">Upload your avatar</label>
             <form className="dashboard-form" onSubmit={updateUser}>
               <input
                 type="text"
